@@ -1,0 +1,32 @@
+.beautiful-header {
+  background-image: radial-gradient(circle, #3241a6 0, #202a6b 200%);
+}
+
+.logo-header {
+  max-width: 16em;
+  height: auto;
+}
+
+.has-primary-color {
+  border-color: #ff8a5b;
+  color: #ff8a5b;
+}
+
+.has-secondary-color {
+  border-color: #ff5755;
+  color: #ff5755;
+}
+
+.has-transparent-background {
+  background: transparent;
+}
+
+.is-secondary-button {
+  background: #ff5755;
+  border-color: #ff5755;
+  color: #202a6b;
+}
+
+.is-hero-button {
+  font-size: 1.2em;
+}
