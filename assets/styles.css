@@ -30,3 +30,9 @@
 .is-hero-button {
   font-size: 1.2em;
 }
+
+.title a {
+  text-decoration: none;
+  color: #363636;
+  cursor: default;
+}
