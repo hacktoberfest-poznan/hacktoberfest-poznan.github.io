@@ -1,5 +1,33 @@
+a {
+  color: #ff5755 !important;
+}
+
+h2.title {
+  color: #fff !important;
+}
+
+.button {
+  color: #fff !important;
+}
+
+.nav-item {
+  color: #fff !important;
+}
+
+section .subtitle {
+  padding: 3em 0;
+}
+
+.section-large {
+  padding: 10em 0;
+}
+
 .beautiful-header {
   background-image: radial-gradient(circle, #3241a6 0, #202a6b 200%);
+}
+
+.beautiful-header .subtitle {
+  color: #fff;
 }
 
 .logo-header {
@@ -24,7 +52,7 @@
 .is-secondary-button {
   background: #ff5755;
   border-color: #ff5755;
-  color: #202a6b;
+  color: #fff;
 }
 
 .is-hero-button {
@@ -35,4 +63,13 @@
   text-decoration: none;
   color: #363636;
   cursor: default;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+.hero.is-dark .nav-menu {
+  background-color: transparent;
 }

@@ -16,104 +16,305 @@
   <meta name="apple-mobile-web-app-title" content="Hacktoberfest Poznań">
   <meta name="application-name" content="Hacktoberfest Poznań">
   <meta name="theme-color" content="#2d3b96">
+  <script src="https://cdn.jsdelivr.net/npm/cash-dom@1.3.5/dist/cash.min.js"></script>
+  <script src="./assets/scripts.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+      // Basic options for a simple Google Map
+      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+      var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 15,
+
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(52.401070, 16.893598), // New York
+
+        // How you would like to style the map.
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: [
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#193341"
+              }
+            ]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#202a6b"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#29768a"
+              },
+              {
+                "lightness": -37
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#3241a6"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#3241a6"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "visibility": "on"
+              },
+              {
+                "color": "#3241a6"
+              },
+              {
+                "weight": 2
+              },
+              {
+                "gamma": 0.84
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#ffffff"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "weight": 0.6
+              },
+              {
+                "color": "#1a3541"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#3241a6"
+              }
+            ]
+          }
+        ]
+      };
+
+      // Get the HTML DOM element that will contain your map
+      // We are using a div with id="map" seen below in the <body>
+      var mapElement = document.getElementById('map');
+
+      // Create the Google Map using our element and options defined above
+      var map = new google.maps.Map(mapElement, mapOptions);
+
+      // Let's also add a marker while we're at it
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(52.401070, 16.893598),
+        map: map,
+        title: 'Hacktoberfest Poznan'
+      });
+    }
+  </script>
 </head>
 
 <body>
-  <section class="hero is-dark beautiful-header is-fullheight">
-    <!-- Hero header: will stick at the top -->
-    <div class="hero-head">
-      <header class="nav">
-        <div class="container">
-          <div class="nav-left">
-            <a class="nav-item">Hacktoberfest Poznań</a>
-          </div>
-          <span class="nav-toggle">
+<section class="hero is-dark beautiful-header is-fullheight">
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left">
+          <a class="nav-item">Hacktoberfest Poznań</a>
+        </div>
+        <span class="nav-toggle is-active">
           <span></span>
           <span></span>
           <span></span>
           </span>
-          <div class="nav-right nav-menu">
-            <a href="#agenda" class="nav-item is-active">
-              Agenda
-            </a>
-            <a href="#speakers" class="nav-item">
-              Speakers
-            </a>
-            <a href="#tickets" class="nav-item">
-              Get a ticket
-            </a>
-            <a href="#location" class="nav-item">
-              Where?
-            </a>
-            <a class="nav-item">
+        <div class="nav-right nav-menu is-active">
+          <a href="#agenda" class="nav-item is-active">
+            Agenda
+          </a>
+          <a href="#speakers" class="nav-item">
+            Speakers
+          </a>
+          <a href="#tickets" class="nav-item">
+            Get a ticket
+          </a>
+          <a href="#location" class="nav-item">
+            Where?
+          </a>
+          <a class="nav-item is-hidden-mobile" href="https://www.facebook.com/hacktoberfest/" target="_blank">
               <span class="icon">
                 <i class="fa fa-facebook"></i>
               </span>
-            </a>
-          </div>
+          </a>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
+  </div>
 
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title">
-          <figure class="image">
-            <img src="./assets/logo.svg" class="logo-header">
-          </figure>
-        </h1>
-        <div class="subtitle">
-          <br>
-          <h2 class="title is-2">14th of October</h2>
-          <a class="button is-outlined has-transparent-background has-primary-color is-hero-button">Learn more</a>
-          <a class="button is-secondary-button is-hero-button">RSVP</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
       <h1 class="title">
-        <a name="agenda">
-          Agenda
-        </a>
+        <figure class="image">
+          <img src="./assets/logo.svg" class="logo-header">
+        </figure>
       </h1>
-      <table class="table is-fullwidth">
-        <tbody>
-          <tr>
-            <td><i class="fa fa-beer"></i></td>
-            <td><i class="fa fa-clock-o"></i></td>
-          </tr>
-          <tr>
-            <td>Introduction to Hacktoberfest</td>
-            <td>11:00 - 11:30</td>
-          </tr>
-          <tr>
-            <td>Maintainer intros/pitches</td>
-            <td>11:30 - 12:00</td>
-          </tr>
-          <tr>
-            <td>Hacking for Hacktoberfest</td>
-            <td>12:00 - 16:00</td>
-          </tr>
-          <tr>
-            <td>Wrap up</td>
-            <td>16:00 - 16:30</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          Hacktoberfest Poznan. Powered by <a href="https://setapp.pl" target="_blank">Setapp</a>
-        </p>
+      <div class="subtitle">
+        <br>
+        <h2 class="title is-2">14th of October 2017</h2>
+        <a class="button is-outlined has-transparent-background has-primary-color is-hero-button">Learn more</a>
+        <a class="button is-secondary-button is-hero-button" href="#tickets">RSVP</a>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      <a name="agenda">
+        About Hacktoberfest
+      </a>
+    </h1>
+    <div class="subtitle">
+      <b>Hacktoberfest</b> is an annual event across all of <b>GitHub</b> which is meant to encourage developers to
+      contribute to open source projects.<br>
+      As a couple of guys amazed by open source projects, we decided to organise a meetup for this event in
+      <b>Poznań</b>.<br>
+      No matter if it's your first step in open source or you maintain your major project for several years, join us and
+      let's hack for Hacktoberfest together.
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      <a name="agenda">
+        Agenda
+      </a>
+    </h1>
+    <table class="table is-fullwidth">
+      <tbody>
+      <tr>
+        <td><i class="fa fa-beer"></i></td>
+        <td><i class="fa fa-clock-o"></i></td>
+      </tr>
+      <tr>
+        <td>Introduction to Hacktoberfest</td>
+        <td>11:00 - 11:30</td>
+      </tr>
+      <tr>
+        <td>Maintainer intros/pitches</td>
+        <td>11:30 - 12:00</td>
+      </tr>
+      <tr>
+        <td>Hacking for Hacktoberfest</td>
+        <td>12:00 - 16:00</td>
+      </tr>
+      <tr>
+        <td>Wrap up</td>
+        <td>16:00 - 16:30</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      <a name="agenda">
+        Speakers
+      </a>
+      <div class="subtitle has-text-centered">
+        We are going to announce speakers pretty soon.
+      </div>
+    </h1>
+  </div>
+</section>
+<div class="section beautiful-header section-large">
+  <div class="subtitle has-text-centered">
+    If you maintain any open source project feel free to join our event as a Maintainer.<br>
+    Contact us at <a href="mailto:team@hacktoberfest.pl">team@hacktoberfest.pl</a>
+  </div>
+</div>
+<section class="section" id="tickets">
+  <div class="container">
+    <h1 class="title">
+      <a name="agenda">
+        Get a ticket
+      </a>
+      <div class="subtitle has-text-centered">
+        Tickets are and always will be free.<br>
+        <br>
+        <a class="button button is-secondary-button is-hero-button"
+           href="https://www.eventbrite.com/e/hacktoberfest-in-poznan-tickets-38398144885" target="_blank">Get one</a>
+      </div>
+    </h1>
+  </div>
+</section>
+<section class="section" id="where">
+  <div class="container">
+    <h1 class="title">Where?</h1>
+    <span>
+      <b>Setapp Showroom</b><br>
+      Wojskowa 4<br>
+      60-792 Poznań
+    </span>
+  </div>
+</section>
+<div id="map"></div>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Hacktoberfest Poznan. Powered by <a href="https://setapp.pl" target="_blank">Setapp</a>
+      </p>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>
