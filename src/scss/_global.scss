@@ -1,17 +1,17 @@
 a {
-  color: #ff5755 !important;
+  color: $color-red !important;
 }
 
 h2.title {
-  color: #fff !important;
+  color: $color-white !important;
 }
 
 .button {
-  color: #fff !important;
+  color: $color-white !important;
 }
 
 .nav-item {
-  color: #fff !important;
+  color: $color-white !important;
 }
 
 section .subtitle {
@@ -36,13 +36,13 @@ section .subtitle {
 }
 
 .has-primary-color {
-  border-color: #ff8a5b;
-  color: #ff8a5b;
+  border-color: $color-orange;
+  color: $color-orange;
 }
 
 .has-secondary-color {
-  border-color: #ff5755;
-  color: #ff5755;
+  border-color: $color-red;
+  color: $color-red;
 }
 
 .has-transparent-background {
@@ -50,9 +50,9 @@ section .subtitle {
 }
 
 .is-secondary-button {
-  background: #ff5755;
-  border-color: #ff5755;
-  color: #fff;
+  background: $color-red;
+  border-color: $color-red;
+  color: $color-white;
 }
 
 .is-hero-button {
@@ -72,7 +72,7 @@ section .subtitle {
 
 .nav,
 .nav-menu {
-  background-color: #202a6b !important;
+  background-color: $color-blue !important;
 }
 
 .hero.is-dark .nav-menu {
