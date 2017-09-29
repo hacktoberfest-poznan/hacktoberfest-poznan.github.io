@@ -23,22 +23,15 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGFfinjgJzw-Qo-Ju86IUXBt7E39l06Pc"
   type="text/javascript"></script>
   <script type="text/javascript">
-    // When the window has finished loading create our google map below
     google.maps.event.addDomListener(window, 'load', init);
 
     function init() {
-      // Basic options for a simple Google Map
-      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
       var mapOptions = {
         key: 'AIzaSyBzCaMXsWRSJe4gMDZkxG9n9tLqTyxl',
-        // How zoomed in you want the map to start at (always required)
         zoom: 15,
 
-        // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(52.401070, 16.893598), // New York
+        center: new google.maps.LatLng(52.401070, 16.893598),
 
-        // How you would like to style the map.
-        // This is where you would paste any style found on Snazzy Maps.
         styles: [
           {
             "featureType": "water",
@@ -145,18 +138,14 @@
         ]
       };
 
-      // Get the HTML DOM element that will contain your map
-      // We are using a div with id="map" seen below in the <body>
       var mapElement = document.getElementById('map');
 
-      // Create the Google Map using our element and options defined above
       var map = new google.maps.Map(mapElement, mapOptions);
 
-      // Let's also add a marker while we're at it
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(52.401070, 16.893598),
         map: map,
-        title: 'Hacktoberfest Poznan'
+        title: 'Hacktoberfest Poznań'
       });
     }
   </script>
@@ -210,7 +199,7 @@
       <div class="subtitle">
         <br>
         <h2 class="title is-2">14th of October 2017</h2>
-        <a class="button is-outlined has-transparent-background has-primary-color is-hero-button">Learn more</a>
+        <a href="#about" class="button is-outlined has-transparent-background has-primary-color is-hero-button">Learn more</a>
         <a class="button is-secondary-button is-hero-button" href="#tickets">RSVP</a>
       </div>
     </div>
@@ -219,7 +208,9 @@
 <section class="section" id="about">
   <div class="container">
     <h1 class="title">
-      About Hacktoberfest
+      <a name="about">
+        About Hacktoberfest
+      </a>
     </h1>
     <div class="subtitle">
       <b>Hacktoberfest</b> is an annual event across all of <b>GitHub</b> which is meant to encourage developers to
@@ -244,19 +235,19 @@
       </tr>
       <tr>
         <td>Introduction to Hacktoberfest</td>
-        <td>11:00 - 11:30</td>
+        <td>12:00 - 12:30</td>
       </tr>
       <tr>
-        <td>Maintainer intros/pitches</td>
-        <td>11:30 - 12:00</td>
+        <td>Maintainer intros</td>
+        <td>12:30 - 13:00</td>
       </tr>
       <tr>
-        <td>Hacking for Hacktoberfest</td>
-        <td>12:00 - 16:00</td>
+        <td>Hacking and Talks</td>
+        <td>13:00 - 18:00</td>
       </tr>
       <tr>
-        <td>Wrap up</td>
-        <td>16:00 - 16:30</td>
+        <td>Afterparty & Networking</td>
+        <td>18:00 - 19:00</td>
       </tr>
       </tbody>
     </table>
@@ -266,14 +257,33 @@
   <div class="container">
     <h1 class="title">Speakers</h1>
     <div class="subtitle has-text-centered">
-      We are going to announce speakers pretty soon.
+        <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-128x128">
+                  <img src="./assets/artur.iwicki.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Artur Iwicki</strong> <small><a href="https://twitter.com/suve/"><i class="fa fa-twitter"></i > @suvepl</a> <a href="https://github.com/suve/"><i class="fa fa-github"></i> @suve</a></small>
+                    <br>
+                    Copyleft oraz copyfree - krótki przegląd popularnych licencji
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <br><br>
+      We are going to announce more speakers pretty soon.
     </div>
   </div>
 </section>
 <div class="section beautiful-header section-large">
   <div class="subtitle has-text-centered">
     If you maintain any open source project feel free to join our event as a Maintainer.<br>
-    Contact us at <a href="mailto:team@hacktoberfest.pl">team@hacktoberfest.pl</a>
+    Contact us at: <a href="mailto:team@hacktoberfest.pl">team@hacktoberfest.pl</a> or <a href="https://m.me/hacktoberfest">Facebook messenger</a>.
   </div>
 </div>
 <section class="section" id="tickets">
@@ -291,9 +301,10 @@
   <div class="container">
     <h1 class="title">Where?</h1>
     <span>
-      <b>Setapp Showroom</b><br>
+      <b>Setapp</b><br>
       Wojskowa 4<br>
-      60-792 Poznań
+      60-792 Poznań<br>
+      <a href="https://goo.gl/maps/TTTy65MpqE52">Google Maps</a>
     </span>
   </div>
 </section>
