@@ -2,8 +2,8 @@ a {
   color: $color-red !important;
 }
 
-h2.title {
-  color: $color-white !important;
+p {
+  line-height: 1.5em;
 }
 
 .button {
@@ -23,11 +23,22 @@ section .subtitle {
 }
 
 .beautiful-header {
-  background-image: radial-gradient(circle, #3241a6 0, #202a6b 200%);
+  background-image: url('./assets/flourish-bottom.svg'), url('./assets/flourish-top.svg'), radial-gradient(circle, #3241a6 0, #202a6b 200%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, top left;
+
+  .subtitle {
+    color: #fff;
+  }
 }
 
-.beautiful-header .subtitle {
-  color: #fff;
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+
+  span {
+    color: $color-orange;
+  }
 }
 
 .logo-header {
