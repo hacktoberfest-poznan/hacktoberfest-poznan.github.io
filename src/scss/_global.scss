@@ -60,6 +60,11 @@ section .subtitle {
       figure {
         margin: 0 auto 20px auto;
       }
+
+      .content small {
+        margin-bottom: -15px;
+        display: block;
+      }
     }
   }
 
@@ -124,4 +129,27 @@ section .subtitle {
 
 .hero.is-dark .nav-menu {
   background-color: transparent;
+}
+
+.table td, .table th {
+  border: 1px solid #eee;
+  border-width: 0 0 1px;
+}
+
+@media screen and (max-width: 992px) {
+  .table td, .table th {
+    border: 0;
+    border-width: 0 0 1px;
+    display: block;
+  }
+
+  .table td:last-of-type, .table th {
+    border: 1px solid #eee;
+    border-width: 0 0 1px;
+    padding-top: 0;
+  }
+
+  .table td:first-of-type {
+    font-weight: 600;
+  }
 }
