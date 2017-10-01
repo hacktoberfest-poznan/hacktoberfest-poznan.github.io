@@ -37,9 +37,9 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
     return gulp.src(
-        [
-            paths.js
-        ])
+            [
+                paths.js
+            ])
         .pipe(concat('bundle.min.js'))
         .pipe(uglify())
         .on('error', function (err) {
@@ -56,7 +56,9 @@ gulp.task('imagemin', function () {
 
 gulp.task('minify', function () {
     return gulp.src(paths.html)
-        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
         .pipe(gulp.dest(dest))
         .pipe(livereload());
 });
@@ -67,6 +69,16 @@ gulp.task('copy', function () {
         './src/CNAME',
         './src/manifest.json'
     ]).pipe(gulp.dest(dest));
+});
+
+var ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+    var options = {
+        branch: 'master'
+    };
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages(options));
 });
 
 gulp.task('default', ['styles', 'minify', 'scripts', 'imagemin', 'copy'], function () {
