@@ -6,6 +6,6 @@ env:
   global:
   - ENCRYPTION_LABEL: b8967b30698e
   - COMMIT_AUTHOR_EMAIL: travis@autodeploy.com
-before_install:
-- openssl aes-256-cbc -K $encrypted_b8967b30698e_key -iv $encrypted_b8967b30698e_iv
-  -in deploy_key.enc -out deploy_key -d
+branches:
+  only:
+  - development
