@@ -127,6 +127,10 @@ section .subtitle {
   background-color: $color-blue !important;
 }
 
+.hero.is-dark {
+  background-color: #3241a6;
+}
+
 .hero.is-dark .nav-menu {
   background-color: transparent;
 }
