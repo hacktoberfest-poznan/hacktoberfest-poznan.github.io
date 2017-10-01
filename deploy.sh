@@ -47,7 +47,6 @@ fi
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
-git subtree split --branch master --prefix dist/
 git add -A .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
