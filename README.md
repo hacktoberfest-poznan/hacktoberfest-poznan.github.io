@@ -1,4 +1,4 @@
-# hacktoberfest-poznan.github.io
+# Hacktoberfest Poznań 2017
 
 
 * Website - [hacktoberfest.pl](https://hacktoberfest.pl)
