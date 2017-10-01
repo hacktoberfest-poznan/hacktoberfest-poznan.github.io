@@ -60,5 +60,4 @@ chmod 600 ../deploy_key
 eval `ssh-agent -s`
 ssh-add ../deploy_key
 
-git remote add origin2 $SSH_REPO
-git push -f -u origin2 $TARGET_BRANCH
+git push -f -u origin $TARGET_BRANCH
