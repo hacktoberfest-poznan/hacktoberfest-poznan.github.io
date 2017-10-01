@@ -72,3 +72,5 @@ gulp.task('copy', function () {
 gulp.task('default', ['styles', 'minify', 'scripts', 'imagemin', 'copy'], function () {
     gulp.watch([paths.scss, paths.html, paths.js], ['styles', 'minify', 'scripts']);
 });
+
+gulp.task('build', ['styles', 'minify', 'scripts', 'imagemin', 'copy']);
