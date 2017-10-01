@@ -47,6 +47,7 @@ fi
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
+git subtree split --branch master --prefix dist/
 git add -A .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
@@ -61,4 +62,4 @@ eval `ssh-agent -s`
 ssh-add ../deploy_key
 
 # Now that we're all set up, we can push.
-git push $SSH_REPO $TARGET_BRANCH
+git push
