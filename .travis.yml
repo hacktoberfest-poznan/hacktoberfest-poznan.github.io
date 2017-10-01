@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- stable
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: b8967b30698e
+  - COMMIT_AUTHOR_EMAIL: travis@autodeploy.com
+branches:
+  only:
+  - development
