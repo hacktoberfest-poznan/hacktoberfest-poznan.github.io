@@ -15,6 +15,15 @@ p {
 
 .button {
   color: $color-white !important;
+  border-width: 3px;
+
+  &:hover {
+    border: 3px $color-orange solid;
+  }
+}
+
+.is-padded {
+  padding: 1rem !important;
 }
 
 .nav-item {
@@ -95,8 +104,8 @@ section .subtitle {
 }
 
 .has-primary-color {
-  border-color: $color-orange;
-  color: $color-orange;
+  border-color: $color-red;
+  color: $color-red;
 }
 
 .has-secondary-color {
