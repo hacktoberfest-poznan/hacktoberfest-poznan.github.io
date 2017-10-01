@@ -60,5 +60,5 @@ chmod 600 ../deploy_key
 eval `ssh-agent -s`
 ssh-add ../deploy_key
 
-# Now that we're all set up, we can push.
-git push $SSH_REPO $TARGET_BRANCH
+git remote add origin $SSH_REPO
+git push -f -u origin $TARGET_BRANCH
