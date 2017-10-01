@@ -4,7 +4,7 @@ node_js:
 script: bash ./deploy.sh
 env:
   global:
-  - ENCRYPTION_LABEL: b8967b30698e
+  - ENCRYPTION_LABEL: 8eb01c6432e
   - COMMIT_AUTHOR_EMAIL: travis@autodeploy.com
 branches:
   only:
