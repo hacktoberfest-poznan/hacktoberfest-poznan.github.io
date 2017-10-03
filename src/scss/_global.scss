@@ -16,7 +16,6 @@ p {
 .button {
   color: $color-white !important;
   border-width: 3px;
-
   &:hover {
     border: 3px $color-orange solid;
   }
@@ -38,7 +37,6 @@ p {
 
 section .subtitle {
   padding: 3em 0;
-
   @media screen and (max-width: 992px) {
     padding: 3em 0 0 0;
   }
@@ -46,7 +44,6 @@ section .subtitle {
 
 .section-large {
   padding: 10em 1em;
-
   @media screen and (min-width: 992px) {
     padding: 10em 0;
   }
@@ -54,13 +51,13 @@ section .subtitle {
 
 .beautiful-header {
   background-color: #3241a6;
-
   @media screen and (min-width: 992px) {
     background-image: url('./assets/flourish-bottom.svg'), url('./assets/flourish-top.svg'), radial-gradient(circle, #3241a6 0, #202a6b 200%);
   }
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom right, top left;
-
+  background-repeat: no-repeat,
+  no-repeat;
+  background-position: bottom right,
+  top left;
   .subtitle {
     color: #fff;
   }
@@ -68,22 +65,18 @@ section .subtitle {
 
 .box.speaker {
   box-shadow: none;
-
   .media {
     @media screen and (max-width: 992px) {
       display: block;
-
       figure {
         margin: 0 auto 20px auto;
       }
-
       .content small {
         margin-bottom: -15px;
         display: block;
       }
     }
   }
-
   .image img {
     border-radius: 50%;
   }
@@ -92,7 +85,6 @@ section .subtitle {
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-
   span {
     color: $color-orange;
   }
@@ -151,25 +143,46 @@ section .subtitle {
   background-color: transparent;
 }
 
-.table td, .table th {
+.table td,
+.table th {
   border: 1px solid #eee;
   border-width: 0 0 1px;
 }
 
 @media screen and (max-width: 992px) {
-  .table td, .table th {
+  .table td,
+  .table th {
     border: 0;
     border-width: 0 0 1px;
     display: block;
   }
-
-  .table td:last-of-type, .table th {
+  .table td:last-of-type,
+  .table th {
     border: 1px solid #eee;
     border-width: 0 0 1px;
     padding-top: 0;
   }
-
   .table td:first-of-type {
     font-weight: 600;
   }
+}
+
+.image {
+  &.is-footer-image {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.25;
+
+    img {
+      max-width: 3.5em;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.footer-logos {
+  width: 20rem;
+  margin: 0 auto;
 }
