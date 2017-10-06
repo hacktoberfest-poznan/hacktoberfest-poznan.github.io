@@ -9,8 +9,7 @@
 
         function gtag() {
             dataLayer.push(arguments)
-        }
-        ;
+        };
         gtag('js', new Date());
 
         gtag('config', 'UA-107368470-1');
@@ -18,16 +17,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hacktoberfest | 14 Oct 2017, Poznań, Poland</title>
-    <meta name="description"
-          content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects.">
+    <meta name="description" content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects.">
     <meta name="google-site-verification" content="w1l-16SXQaUk-1AXtCH4_WBX5FOA1Z2Wgw17R0KDxQo"/>
 
     <meta property="og:url" content="https://hacktoberfest.pl"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Hacktoberfest | 14 Oct 2017, Poznań, Poland"/>
-    <meta property="og:description"
-          content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects."
-    />
+    <meta property="og:description" content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects."/>
     <meta property="og:image" content="https://hacktoberfest.pl/assets/cover.jpg"/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -84,7 +80,7 @@
         <div class="container has-text-centered">
             <div class="title">
                 <figure class="image">
-                    <img src="./assets/logo.svg" class="logo-header">
+                    <img src="./assets/logo.svg" class="logo-header" alt="Hacktoberfest Poznań Logo">
                 </figure>
                 <br>
                 <h1>Let's hack for Open Source together</h1>
@@ -448,6 +444,44 @@
         });
     }
 </script>
+
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Event",
+      "name": "Hacktoberfest Poznań 2017",
+      "startDate": "2017-10-06T12:00",
+      "location": {
+        "@type": "Place",
+        "name": "Setapp, Poznań Poland",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Wojskowa 4",
+          "addressLocality": "Poznań",
+          "postalCode": "60-792",
+          "addressRegion": "Greater Poland",
+          "addressCountry": "Poland"
+        }
+      },
+      "image": [
+        "https://hacktoberfest.pl/assets/social.png"
+       ],
+      "description": "Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects. As a couple of guys amazed by open source projects, we decided to organise a meetup for this event in Poznań. Whether it's your first step in open source or you already maintain your major project for several years, join us and let's hack for Hacktoberfest together.",
+      "endDate": "2017-10-14T19:00",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://hacktoberfest.pl/",
+        "price": "0",
+        "priceCurrency": "PLN",
+        "availability": "http://schema.org/InStock",
+        "validFrom": "2017-10-01T00:00"
+      },
+      "performer": {
+        "@type": "PerformingGroup",
+        "name": "Hacktoberfest Poznań"
+      }
+    }
+    </script>
 </body>
 
 </html>
