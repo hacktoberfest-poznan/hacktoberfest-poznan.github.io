@@ -9,7 +9,8 @@
 
         function gtag() {
             dataLayer.push(arguments)
-        };
+        }
+        ;
         gtag('js', new Date());
 
         gtag('config', 'UA-107368470-1');
@@ -17,18 +18,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hacktoberfest | 14 Oct 2017, Poznań, Poland</title>
-    <meta name="description" content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects.">
-    <meta name="google-site-verification" content="w1l-16SXQaUk-1AXtCH4_WBX5FOA1Z2Wgw17R0KDxQo" />
+    <meta name="description"
+          content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects.">
+    <meta name="google-site-verification" content="w1l-16SXQaUk-1AXtCH4_WBX5FOA1Z2Wgw17R0KDxQo"/>
 
-    <meta property="og:url" content="https://hacktoberfest.pl" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hacktoberfest | 14 Oct 2017, Poznań, Poland" />
-    <meta property="og:description" content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects."
+    <meta property="og:url" content="https://hacktoberfest.pl"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Hacktoberfest | 14 Oct 2017, Poznań, Poland"/>
+    <meta property="og:description"
+          content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects."
     />
-    <meta property="og:image" content="https://hacktoberfest.pl/assets/cover.jpg" />
+    <meta property="og:image" content="https://hacktoberfest.pl/assets/cover.jpg"/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
@@ -36,336 +38,416 @@
     <link rel="manifest" href="/src/manifest.json">
     <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#ff625f">
 
+    <link href="https://fonts.googleapis.com/css?family=Esteban|Montserrat:800" rel="stylesheet">
+
     <meta name="apple-mobile-web-app-title" content="Hacktoberfest Poznań">
     <meta name="application-name" content="Hacktoberfest Poznań">
     <meta name="theme-color" content="#2d3b96">
 </head>
 
 <body>
-    <section class="hero is-dark beautiful-header is-fullheight">
-        <!-- Hero header: will stick at the top -->
-        <div class="hero-head">
-            <header class="nav">
-                <div class="container">
+<section class="hero is-dark beautiful-header is-fullheight">
+    <!-- Hero header: will stick at the top -->
+    <div class="hero-head">
+        <header class="nav">
+            <div class="container">
                     <span class="nav-toggle">
-          <span></span>
+                    <span></span>
                     <span></span>
                     <span></span>
                     </span>
-                    <div class="nav-right nav-menu">
-                        <a href="#agenda" class="nav-item">
+                <div class="nav-right nav-menu">
+                    <a href="#agenda" class="nav-item">
                         Agenda
                     </a>
-                        <a href="#speakers" class="nav-item">
+                    <a href="#speakers" class="nav-item">
                         Speakers
                     </a>
-                        <a href="#tickets" class="nav-item">
+                    <a href="#tickets" class="nav-item">
                         Get a ticket
                     </a>
-                        <a href="#location" class="nav-item">
+                    <a href="#location" class="nav-item">
                         Where?
                     </a>
-                        <a class="nav-item is-hidden-mobile" href="https://www.facebook.com/hacktoberfest/" target="_blank">
+                    <a class="nav-item is-hidden-mobile" href="https://www.facebook.com/hacktoberfest/" target="_blank">
               <span class="icon">
                 <i class="fa fa-facebook"></i>
               </span>
                     </a>
-                    </div>
-                </div>
-            </header>
-        </div>
-
-        <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <div class="title">
-                    <figure class="image">
-                        <img src="./assets/logo.svg" class="logo-header">
-                    </figure>
-                    <br>
-                    <h1>Let's hack for Open Source together</h1>
-                </div>
-                <div class="subtitle">
-                    <h2 class="title is-2">October 14<sup>th</sup> 2017</h2>
-                    <a href="#about" class="button is-outlined has-transparent-background has-primary-color is-hero-button">Learn
-                    more</a>
-                    <a class="button is-secondary-button is-hero-button" href="#tickets">RSVP</a>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="title is-2">
-                About Hacktoberfest
-            </h2>
-            <div class="content is-medium">
-                <p>
-                    <b><a target="_blank" href="https://hacktoberfest.digitalocean.com">Hacktoberfest</a></b> is an annual event across all of <b>GitHub</b> which is meant to encourage developers
-                    to contribute to open source projects.
-                </p>
-                <p>
-                    As a couple of guys amazed by open source projects, we decided to organise a meetup for this event in
-                    <b>Poznań</b>.
-                </p>
-                <p>
-                    Whether it's your first step in open source or you already maintain your major project for several years, join us and let's
-                    hack for Hacktoberfest together.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="section" id="agenda">
-        <div class="container">
-            <h2 class="title is-2">
-                Agenda
-            </h2>
-            <table class="table is-fullwidth">
-                <tbody>
-                    <tr>
-                        <td>Introduction to Hacktoberfest</td>
-                        <td>12:00 - 12:30</td>
-                    </tr>
-                    <tr>
-                        <td>Maintainer intros</td>
-                        <td>12:30 - 13:00</td>
-                    </tr>
-                    <tr>
-                        <td>Hacking and Talks</td>
-                        <td>13:00 - 18:00</td>
-                    </tr>
-                    <tr>
-                        <td>Afterparty & Networking</td>
-                        <td>18:00 - 19:00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <section class="section" id="speakers">
-        <div class="container">
-            <h1 class="title is-2">Speakers</h1>
-            <div class="subtitle has-text-centered">
-                <!-- Artur -->
-                <div class="box speaker">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-128x128">
-                                <img src="./assets/artur.iwicki.jpg" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="content">
-                                <p>
-                                    <strong>Artur Iwicki</strong>
-                                    <small><a href="https://twitter.com/suvepl/"><i class="fa fa-twitter"></i> suvepl</a> <a
-                                        href="https://github.com/suve/"><i class="fa fa-github"></i> suve</a></small>
-                                    <br> Copyleft oraz copyfree - krótki przegląd popularnych licencji
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Olek -->
-                <div class="box speaker">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-128x128">
-                                <img src="./assets/aleksander.lorenc.jpg" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="content">
-                                <p>
-                                    <strong>Aleksander Lorenc</strong>
-                                    <small><a href="https://www.linkedin.com/in/aleksander-lorenc-990923b6/"><i class="fa fa-linkedin"></i> aleksander.lorenc</a> <a
-                                        href="https://github.com/evilmint/"><i class="fa fa-github"></i> evilmint</a></small>
-                                    <br> Pierwsze kroki w Open Source - Github, git oraz pull requesty
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <br><br> We are going to announce more speakers shortly.
-            </div>
-        </div>
-    </section>
-    <div class="section beautiful-header section-large">
-        <p class="subtitle is-4 has-text-centered">
-            If you maintain any open source project feel free to join our event as a Maintainer.<br><br> Contact us at:
-            <a href="mailto:team@hacktoberfest.pl">team@hacktoberfest.pl</a> or <a href="https://m.me/hacktoberfest">Facebook messenger</a>.
-        </p>
+        </header>
     </div>
-    <section class="section" id="faq">
-        <div class="container">
-            <h2 class="title is-2">FAQ</h2>
-            <div class="title is-4 is-spaced">Question one</div>
-            <div class="subtitle is-spaced">                
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed vehicula enim, nec tempus lorem. Proin non accumsan elit. Nam non urna eu lectus elementum bibendum ac eget lacus. Fusce et fringilla purus, eget mollis ex. Aenean ultrices facilisis auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, mi scelerisque finibus feugiat, eros ex malesuada orci, ut malesuada eros magna a metus. Ut porta lacus eros, at feugiat arcu consectetur a.
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="title">
+                <figure class="image">
+                    <img src="./assets/logo.svg" class="logo-header">
+                </figure>
+                <br>
+                <h1>Let's hack for Open Source together</h1>
             </div>
-            <div class="title is-4 is-spaced">Question two?</div>                
-            <div class="subtitle is-spaced">                
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed vehicula enim, nec tempus lorem. Proin non accumsan elit. Nam non urna eu lectus elementum bibendum ac eget lacus. Fusce et fringilla purus, eget mollis ex. Aenean ultrices facilisis auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, mi scelerisque finibus feugiat, eros ex malesuada orci, ut malesuada eros magna a metus. Ut porta lacus eros, at feugiat arcu consectetur a.
-            </div>
-            <div class="title is-4 is-spaced">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</div>              
-            <div class="subtitle is-spaced">                
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed vehicula enim, nec tempus lorem. Proin non accumsan elit. Nam non urna eu lectus elementum bibendum ac eget lacus. Fusce et fringilla purus, eget mollis ex. Aenean ultrices facilisis auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, mi scelerisque finibus feugiat, eros ex malesuada orci, ut malesuada eros magna a metus. Ut porta lacus eros, at feugiat arcu consectetur a.
-            </div>
-            <div class="title is-4 is-spaced">Wat?</div>                
-            <div class="subtitle is-spaced">
-                Lorem ipsum dolor sit amet.
+            <div class="subtitle">
+                <h2 class="title is-2">October 14<sup>th</sup> 2017</h2>
+                <a href="#about" class="button is-outlined has-transparent-background has-primary-color is-hero-button">Learn
+                    more</a>
+                <a class="button is-secondary-button is-hero-button" href="#tickets">RSVP</a>
             </div>
         </div>
-    </section>
-    <section class="section" id="tickets">
-        <div class="container">
-            <h2 class="title is-2">Get a ticket</h2>
-            <p class="subtitle is-4 has-text-centered">
-                Tickets are free<br>
-                <br>
-                <a class="button button is-secondary-button is-hero-button" href="https://www.eventbrite.com/e/hacktoberfest-in-poznan-tickets-38398144885"
-                    target="_blank">
-                Get a Ticket
-            </a>
+    </div>
+</section>
+<section class="section" id="about">
+    <div class="container">
+        <h2 class="title is-2">
+            About Hacktoberfest
+        </h2>
+        <div class="content is-medium">
+            <p>
+                <b><a target="_blank" href="https://hacktoberfest.digitalocean.com">Hacktoberfest</a></b> is an annual
+                event across all of <b>GitHub</b> which is meant to encourage developers
+                to contribute to open source projects.
+            </p>
+            <p>
+                As a couple of guys amazed by open source projects, we decided to organise a meetup for this event in
+                <b>Poznań</b>.
+            </p>
+            <p>
+                Whether it's your first step in open source or you already maintain your major project for several
+                years, join us and let's
+                hack for Hacktoberfest together.
             </p>
         </div>
-    </section>
-    <section class="section" id="location">
-        <div class="container">
-            <h2 class="title is-2">Where?</h2>
-            <span class="subtitle is-6">
-      <b>Setapp Sp. z o.o.</b><br>
-      Wojskowa 4<br>
-      60-792 Poznań<br>
-      <a href="https://goo.gl/maps/TTTy65MpqE52">Google Maps</a>
-    </span>
+    </div>
+</section>
+<section class="section" id="agenda">
+    <div class="container">
+        <h2 class="title is-2">
+            Agenda
+        </h2>
+        <table class="table is-fullwidth">
+            <tbody>
+            <tr>
+                <td>Welcome talk</td>
+                <td>12:15</td>
+            </tr>
+            <tr>
+                <td>First steps into Open Source - Github, git oraz pull requesty</td>
+                <td>12:30</td>
+            </tr>
+            <tr>
+                <td>Warsztat - Od zera do pierwszego PRa</td>
+                <td>13:15</td>
+            </tr>
+            <tr>
+                <td>Copyleft oraz copyfree - krótki przegląd popularnych licencji</td>
+                <td>14:00</td>
+            </tr>
+            <tr>
+                <td>Food & drinks</td>
+                <td>15:00</td>
+            </tr>
+            <tr>
+                <td>Jak napisać własny emulator</td>
+                <td>16:00</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="content is-medium">
+            <p>
+                All talks are optional and in parallel to the main hacking event so if you're not interested you can
+                continue working on your PR's.
+            </p>
+            <p>
+                You only need to bring a laptop with you - drinks and food are on us!<br/>
+                If you are an open source project maintainer, you can prepare a lightning talk (~5min) to promote your
+                project.
+            </p>
         </div>
-    </section>
-    <div id="map"></div>
-    <footer class="footer">
-        <div class="container">
-            <div class="content has-text-centered">
-                <p>
-                    <b>Hacktoberfest Poznań</b> - An initiative by open minds for open minds
-                </p>
-                <p>Event powered by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i></a> and <a href="https://hacktoberfest.digitalocean.com" target="_blank">DigitalOcean</a></p>
+    </div>
+</section>
+<section class="section" id="speakers">
+    <div class="container">
+        <h2 class="title is-2">Speakers</h2>
+        <div class="subtitle has-text-centered">
+            <!-- Artur -->
+            <div class="box speaker">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="./assets/artur.iwicki.jpg" alt="Artur Iwicki">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Artur Iwicki</strong>
+                                <small><a href="https://twitter.com/suvepl/"><i class="fa fa-twitter"></i> suvepl</a> <a
+                                        href="https://github.com/suve/"><i class="fa fa-github"></i> suve</a></small>
+                                <br> Copyleft oraz copyfree - krótki przegląd popularnych licencji
+                            </p>
+                        </div>
+                    </div>
+                </article>
             </div>
+
+            <!-- Olek -->
+            <div class="box speaker">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="./assets/aleksander.lorenc.jpg" alt="Aleksander Lorenc">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Aleksander Lorenc</strong>
+                                <small><a href="https://www.linkedin.com/in/aleksander-lorenc-990923b6/"><i
+                                        class="fa fa-linkedin"></i> aleksander.lorenc</a> <a
+                                        href="https://github.com/evilmint/"><i class="fa fa-github"></i> evilmint</a>
+                                </small>
+                                <br> Pierwsze kroki w Open Source - Github, git oraz pull requesty
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Karol -->
+            <div class="box speaker">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="./assets/karol.sejka.jpg" alt="Karol Sejka">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Karol Sejka</strong>
+                                <small>
+                                    <a href="https://twitter.com/karolsejka/"><i class="fa fa-twitter"></i>
+                                        karolsejka</a>
+                                    <a href="https://www.linkedin.com/in/karolsejka/"><i class="fa fa-linkedin"></i>
+                                        karolsejka</a>
+                                    <a href="https://github.com/sejka"><i class="fa fa-github"></i> sejka</a>
+                                </small>
+                                <br> Od zera do pierwszego PRa
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Rafał -->
+            <div class="box speaker">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="./assets/rafal.zbytniewski.jpg" alt="Rafał Zbytniewski">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Rafał Zbytniewski</strong>
+                                <small><a href="https://www.linkedin.com/in/rafa%C5%82-zbytniewski-859b5273/"><i
+                                        class="fa fa-linkedin"></i> rafal.zbytniewski</a></small>
+                                <br> Jak napisać własny emulator
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <br><br> If you are an open source project maintainer, you can prepare a lightning talk (~5min) to promote
+            your project.
         </div>
-    </footer>
+    </div>
+</section>
+<div class="section beautiful-header section-large">
+    <div class="container">
+        <p class="subtitle is-4 has-text-centered">
+            If you maintain any open source project feel free to join our event as a Maintainer.<br><br> Contact us at:
+            <a href="mailto:team@hacktoberfest.pl">team@hacktoberfest.pl</a> or <a href="https://m.me/hacktoberfest">Facebook
+            messenger</a>.
+        </p>
+    </div>
+</div>
+<section class="section" id="faq">
+    <div class="container">
+        <h2 class="title is-2">FAQ</h2>
+        <div class="title is-4 is-spaced">What is Hacktoberfest?</div>
+        <div class="subtitle is-spaced">                
+            Hacktoberfest is an initiative by Github and DigitalOceans (<a href="https://hacktoberfest.digitalocean.com/">website</a>) and it's all about contributing to open source projects. After submitting 4 contributions you'll get a limited edtition Hacktoberfest 2017 T-Shirt. You can pick any project of your interest but all of the contributions must be accepted within October.
+        </div>
+        <div class="title is-4 is-spaced">Why are we doing this meetup?</div>                
+        <div class="subtitle is-spaced">                
+            Because we can! We all share a common passion for open source. We consider it to be a very important idea. As such, it’s substantial to encourage new people to join the movement. And what better way could there possibly be?
+        </div>
+        <div class="title is-4 is-spaced">Who could join?</div>              
+        <div class="subtitle is-spaced">                
+            Anyone interested in Software Development. It doesn’t matter if these are your first steps towards Open Source or if you are experienced Software Architect maintaining several projects. For beginners, we’re going to show how to proceed with Git and GitHub. For experienced people, we can offer a comfortable place with snacks to commit and contribute.
+        </div>
+        <div class="title is-4 is-spaced">What's in it for me?</div>                
+        <div class="subtitle is-spaced">
+            By contributing to Open Source, you’re helping everyone in the community. Additionally, as a person, you become more valuable on the market. We have a chance to give what we took from Wikipedia!
+        </div>
+    </div>
+</section>
+<section class="section" id="tickets">
+    <div class="container">
+        <h2 class="title is-2">Get a ticket</h2>
+        <p class="subtitle is-4 has-text-centered">
+            Tickets are free<br>
+            <br>
+            <a class="button button is-secondary-button is-hero-button"
+               href="https://www.eventbrite.com/e/hacktoberfest-in-poznan-tickets-38398144885"
+               target="_blank">
+                Get a Ticket
+            </a>
+        </p>
+    </div>
+</section>
+<section class="section" id="location">
+    <div class="container">
+        <h2 class="title is-2">Where?</h2>
+        <p class="subtitle is-4 has-text-centered">
+            <b>Setapp Sp. z o.o.</b><br>
+            Wojskowa 4<br>
+            60-792 Poznań<br>
+            <a href="https://goo.gl/maps/TTTy65MpqE52">Google Maps</a>
+        </p>
+    </div>
+</section>
+<div id="map"></div>
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <b>Hacktoberfest Poznań</b> - An initiative by open minds for open minds
+            </p>
+            <p>Event powered by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i></a> and <a
+                    href="https://digitalocean.com" target="_blank">DigitalOcean</a></p>
+        </div>
+    </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/cash-dom@1.3.5/dist/cash.min.js"></script>
-    <script src="./js/bundle.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGFfinjgJzw-Qo-Ju86IUXBt7E39l06Pc" type="text/javascript"></script>
-    <script type="text/javascript">
-        google.maps.event.addDomListener(window, 'load', init);
+<script src="https://cdn.jsdelivr.net/npm/cash-dom@1.3.5/dist/cash.min.js"></script>
+<script src="./js/bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGFfinjgJzw-Qo-Ju86IUXBt7E39l06Pc"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', init);
 
-        function init() {
-            var mapOptions = {
-                key: 'AIzaSyBzCaMXsWRSJe4gMDZkxG9n9tLqTyxl',
-                zoom: 15,
+    function init() {
+        var mapOptions = {
+            key: 'AIzaSyBzCaMXsWRSJe4gMDZkxG9n9tLqTyxl',
+            zoom: 15,
 
-                center: new google.maps.LatLng(52.401070, 16.893598),
+            center: new google.maps.LatLng(52.401070, 16.893598),
 
-                styles: [{
-                        "featureType": "water",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#193341"
-                        }]
+            styles: [{
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#193341"
+                }]
+            },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#202a6b"
+                    }]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#29768a"
                     },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#202a6b"
-                        }]
+                        {
+                            "lightness": -37
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#3241a6"
+                    }]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#3241a6"
+                    }]
+                },
+                {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "visibility": "on"
                     },
-                    {
-                        "featureType": "road",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#29768a"
-                            },
-                            {
-                                "lightness": -37
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "geometry",
-                        "stylers": [{
+                        {
                             "color": "#3241a6"
-                        }]
+                        },
+                        {
+                            "weight": 2
+                        },
+                        {
+                            "gamma": 0.84
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#ffffff"
+                    }]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "weight": 0.6
                     },
-                    {
-                        "featureType": "transit",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#3241a6"
-                        }]
-                    },
-                    {
-                        "elementType": "labels.text.stroke",
-                        "stylers": [{
-                                "visibility": "on"
-                            },
-                            {
-                                "color": "#3241a6"
-                            },
-                            {
-                                "weight": 2
-                            },
-                            {
-                                "gamma": 0.84
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#ffffff"
-                        }]
-                    },
-                    {
-                        "featureType": "administrative",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "weight": 0.6
-                            },
-                            {
-                                "color": "#1a3541"
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.icon",
-                        "stylers": [{
-                            "visibility": "off"
-                        }]
-                    },
-                    {
-                        "featureType": "poi.park",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#3241a6"
-                        }]
-                    }
-                ]
-            };
+                        {
+                            "color": "#1a3541"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.icon",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#3241a6"
+                    }]
+                }
+            ]
+        };
 
-            var mapElement = document.getElementById('map');
+        var mapElement = document.getElementById('map');
 
-            var map = new google.maps.Map(mapElement, mapOptions);
+        var map = new google.maps.Map(mapElement, mapOptions);
 
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(52.401070, 16.893598),
-                map: map,
-                title: 'Hacktoberfest Poznań'
-            });
-        }
-    </script>
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(52.401070, 16.893598),
+            map: map,
+            title: 'Hacktoberfest Poznań'
+        });
+    }
+</script>
 </body>
 
 </html>
