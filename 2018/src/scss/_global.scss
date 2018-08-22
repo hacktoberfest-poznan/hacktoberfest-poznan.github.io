@@ -202,5 +202,16 @@ section .subtitle {
 }
 
 .partner-logo {
-  max-width: 10em;
+  max-width: 240px;
+}
+
+.section.section-no-bottom-padding {
+  padding-bottom: 0;
+}
+
+
+@media screen and (max-width: 992px) {
+  .is-hero-button.is-secondary-button + .is-hero-button.is-secondary-button {
+    margin-top: 20px;
+  }
 }
