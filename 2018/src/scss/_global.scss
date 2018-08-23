@@ -33,28 +33,28 @@ body, html {
   font-size: 0.9rem;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .section {
     padding: 2rem 1.5rem;
   }
 }
 
 section .subtitle {
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 768px) {
     padding: 3em 0 0 0;
   }
 }
 
 .section-large {
   padding: 10em 1em;
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     padding: 10em 0;
   }
 }
 
 .beautiful-header {
   background-color: #3241a6;
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     background-image: url('./assets/flourish-bottom.svg'), url('./assets/flourish-top.svg'), radial-gradient(circle, #3241a6 0, #202a6b 200%);
   }
   background-repeat: no-repeat,
@@ -66,10 +66,43 @@ section .subtitle {
   }
 }
 
+.speaker-footer {
+  width: 100%;
+  color: white;
+  border-radius: 0 0 3px 3px;
+  padding: 8px;
+  background-color: $color-blue;
+
+  strong, i {
+    color: white;
+  }
+
+  a + a {
+    margin-left: 5px;
+  }
+}
+
+.speaker-image {
+  height: 150px;
+  @media screen and (max-width: 768px) {
+    height: 240px;
+  }
+  background-size: cover !important;
+  border-radius: 3px 3px 0 0;
+}
+
 .box.speaker {
   box-shadow: none;
+  width: 25%;
+
+  @media screen and (max-width: 768px) {
+    max-width: 300px;
+    margin: 0 auto;
+    width: auto;
+  }
+
   .media {
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 768px) {
       display: block;
       figure {
         margin: 0 auto 20px auto;
@@ -156,7 +189,7 @@ section .subtitle {
   border-width: 0 0 1px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .table td,
   .table th {
     border: 0;
@@ -212,7 +245,7 @@ section .subtitle {
 }
 
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .is-hero-button.is-secondary-button + .is-hero-button.is-secondary-button {
     margin-top: 20px;
   }
