@@ -94,6 +94,16 @@ section .subtitle {
 .box.speaker {
   box-shadow: none;
   width: 25%;
+  text-align: center;
+
+  p {
+    line-height: 1.15em;
+  }
+
+  small {
+    display: block;
+    margin-top: 8px;
+  }
 
   @media screen and (max-width: 768px) {
     max-width: 300px;
