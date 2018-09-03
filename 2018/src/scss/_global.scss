@@ -53,9 +53,9 @@ section .subtitle {
 }
 
 .beautiful-header {
-  background-color: #3241a6;
+  background-color: $color-main;
   @media screen and (min-width: 768px) {
-    background-image: url('./assets/flourish-bottom.svg'), url('./assets/flourish-top.svg'), radial-gradient(circle, #3241a6 0, #202a6b 200%);
+    background-image: url('./assets/flourish-bottom.svg'), url('./assets/flourish-top.svg'), radial-gradient(circle, $color-main 0, $color-main-dark 200%);
   }
   background-repeat: no-repeat,
   no-repeat;
@@ -178,11 +178,11 @@ section .subtitle {
 
 .nav,
 .nav-menu {
-  background-color: $color-blue !important;
+  background-color: $color-main-dark !important;
 }
 
 .hero.is-dark {
-  background-color: #3241a6;
+  background-color: $color-main-dark;
 }
 
 .hero.is-dark .nav-menu {
