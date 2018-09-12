@@ -73,7 +73,7 @@ gulp.task('copy', function () {
 
 var ghPages = require('gulp-gh-pages');
 
-gulp.task('deploy', function () {
+gulp.task('deploy', ['build'],  function () {
     var options = {
         branch: 'master'
     };
