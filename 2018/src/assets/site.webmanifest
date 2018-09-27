@@ -1,0 +1,20 @@
+{
+    "name": "Hacktoberfest",
+    "short_name": "Hacktoberfest",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#582d41",
+    "background_color": "#582d41",
+    "start_url": "https://hacktoberfest.pl/",
+    "display": "standalone"
+}
