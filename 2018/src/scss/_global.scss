@@ -71,7 +71,7 @@ section .subtitle {
   color: white;
   border-radius: 0 0 3px 3px;
   padding: 8px;
-  background-color: $color-blue;
+  background-color: $color-main;
 
   strong, i {
     color: white;
@@ -80,6 +80,10 @@ section .subtitle {
   a + a {
     margin-left: 5px;
   }
+}
+
+.circle {
+  border-radius: 50%;
 }
 
 .speaker-image {
