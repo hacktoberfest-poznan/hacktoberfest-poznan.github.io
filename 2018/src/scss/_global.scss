@@ -273,8 +273,18 @@ section .subtitle {
   background-color: rgba(255, 100, 97, 0.85);
 }
 
-td.time {
-  small {
-    font-size: 0.65em; 
+.table {
+  tr.dinner {
+    background-color: #f7f7f7;
+    
+    &:hover {
+      background-color: #efefef;  
+    }
   }
+  
+  td.time {
+    small {
+      font-size: 0.65em; 
+    }
+  } 
 }
