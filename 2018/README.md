@@ -20,6 +20,6 @@ team@hacktoberfest.pl
 
 * Website - [hacktoberfest.pl](https://hacktoberfest.pl)
 * Facebook - [Hacktoberfest](https://facebook.com/hacktoberfest)
-* Tickets - [Eventbrite](https://www.eventbrite.com/e/hacktoberfest-in-poznan-tickets-38398144885)
+* Tickets - [Eventbrite](https://www.eventbrite.com/e/hacktoberfest-poznan-tickets-49331461730)
 * Gitter - [hacktoberfest-poznan](https://gitter.im/hacktoberfest-poznan/Lobby)
 * Main Event Website - [hacktoberfest.digitalocean.com](https://hacktoberfest.digitalocean.com)
