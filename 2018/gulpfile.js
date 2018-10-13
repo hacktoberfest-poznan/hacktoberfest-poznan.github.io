@@ -1,16 +1,17 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    postcss = require('gulp-postcss'),
-    concat = require('gulp-concat'),
-    htmlmin = require('gulp-htmlmin'),
-    watch = require('gulp-watch'),
-    tildeImporter = require('node-sass-tilde-importer'),
-    autoprefixer = require('autoprefixer'),
-    uglify = require('gulp-uglify'),
-    livereload = require('gulp-livereload'),
-    gutil = require('gulp-util'),
-    cssnano = require('cssnano'),
-    imagemin = require('gulp-imagemin'),
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const concat = require('gulp-concat');
+const htmlmin = require('gulp-htmlmin');
+const watch = require('gulp-watch');
+const tildeImporter = require('node-sass-tilde-importer');
+const autoprefixer = require('autoprefixer');
+const uglify = require('gulp-uglify');
+const livereload = require('gulp-livereload');
+const gutil = require('gulp-util');
+const cssnano = require('cssnano');
+const imagemin = require('gulp-imagemin');
+const ghPages = require('gulp-gh-pages');
 
     dest = "./dist",
 
@@ -22,7 +23,7 @@ var gulp = require('gulp'),
     };
 
 gulp.task('styles', function () {
-    var processor = [
+    const processor = [
         autoprefixer,
         cssnano
     ];
@@ -74,7 +75,7 @@ gulp.task('copy', function () {
 var ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', ['build'],  function () {
-    var options = {
+    const options = {
         branch: 'master'
     };
     return gulp.src('./dist/**/*')
