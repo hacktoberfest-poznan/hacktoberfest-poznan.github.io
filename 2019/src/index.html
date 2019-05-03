@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107368470-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments)
+        };
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107368470-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hacktoberfest | 13 Oct 2018, Poznań, Poland</title>
+    <meta name="description" content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects.">
+    <meta name="google-site-verification" content="w1l-16SXQaUk-1AXtCH4_WBX5FOA1Z2Wgw17R0KDxQo" />
+    <meta name="author" content="Hacktoberfest Poznań">
+
+    <meta property="og:url" content="https://hacktoberfest.pl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hacktoberfest | 13 Oct 2018, Poznań, Poland" />
+    <meta property="og:description" content="Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects." />
+    <meta property="og:image" content="https://hacktoberfest.pl/assets/cover.png" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="/src/manifest.json">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#582d41">
+    <meta name="apple-mobile-web-app-title" content="Hacktoberfest">
+    <meta name="application-name" content="Hacktoberfest">
+    <meta name="msapplication-TileColor" content="#582d41">
+    <meta name="theme-color" content="#582d41">
+
+    <link href="https://fonts.googleapis.com/css?family=Esteban|Montserrat:800" rel="stylesheet">
+
+    <!--leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""></script>
+
+    <meta name="apple-mobile-web-app-title" content="Hacktoberfest Poznań">
+    <meta name="application-name" content="Hacktoberfest Poznań">
+    <meta name="theme-color" content="#2d3b96">
+</head>
+
+<body>
+    <section class="hero is-dark beautiful-header is-fullheight">
+        <!-- Hero header: will stick at the top -->
+        <div class="hero-head">
+            <header class="nav">
+                <div class="container">
+                    <span class="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <div class="nav-right nav-menu">
+                        <a href="#about" class="nav-item">
+                            About
+                        </a>
+                        <a href="#partners" class="nav-item">
+                            Sponsors
+                        </a>
+                        <a href="#agenda" class="nav-item">
+                            Agenda
+                        </a>
+                        <a href="#agenda" class="nav-item">
+                            Speakers
+                        </a>
+                        <a href="#faq" class="nav-item">
+                            FAQ
+                        </a>
+                        <a href="#tickets" class="nav-item nav-item-highlighted">
+                            Tickets
+                        </a>
+                        <a href="#location" class="nav-item">
+                            Where?
+                        </a>
+                        <a class="nav-item is-hidden-mobile" href="https://www.facebook.com/hacktoberfest/" target="_blank">
+                            <span class="icon">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="title">
+                    <span class="image">
+                        <img src="./assets/logo-hacktoberfest.png" class="logo-header" alt="Hacktoberfest 2018">
+                        <img src="./assets/logo-poznan-meetup.png" class="logo-header" alt="Poznań Meetup">
+                    </span>
+                    <br>
+                    <h1>Let's hack for Open Source together</h1>
+                </div>
+                <div class="subtitle">
+                    <h2 class="title is-2">October 13<sup>th</sup> 2018</h2>
+                    <a href="#about" class="button is-outlined has-transparent-background has-primary-color is-hero-button">
+                        Learn more
+                    </a><br><br>
+                    <a class="button is-secondary-button is-hero-button" href="https://gitter.im/hacktoberfest-poznan/Lobby">Talk
+                        on Gitter</a>
+                    <a class="button is-secondary-button is-hero-button" href="https://facebook.com/hacktoberfest">Follow
+                        us on Facebook</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="title is-2">
+                About Hacktoberfest
+            </h2>
+            <div class="content is-medium">
+                <p>
+                    <b><a target="_blank" href="https://hacktoberfest.digitalocean.com">Hacktoberfest</a></b> is an
+                    annual
+                    event across all of <b>GitHub</b> which is meant to encourage developers
+                    to contribute to open source projects.
+                </p>
+                <p>
+                    As a couple of guys amazed by open source projects, we decided to organise a meetup for this event
+                    in
+                    <b>Poznań</b>.
+                </p>
+                <p>
+                    Whether it's your first step in open source or you already maintain your major project for several
+                    years, join us and let's
+                    hack for Hacktoberfest together.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section section-no-bottom-padding" id="partners">
+        <h2 class="title is-2">
+            Hacktoberfest sponsors
+        </h2>
+        <div class="partners has-text-centered">
+            <a target="_blank" href="https://digitalocean.com/">
+                <img class="partner-logo" src="./assets/do_logo_2x.png" alt="Digital Ocean">
+            </a>
+	    <br />
+            <a target="_blank" href="https://github.com/">
+                <img class="partner-logo" src="./assets/gh_logo_2x.png" alt="GitHub">
+            </a>
+	    <br />
+            <a target="_blank" href="https://twilio.com/">
+                <img class="partner-logo" src="./assets/tw_logo_2x.png" alt="Twilio">
+            </a>
+        </div>
+        <h2 class="title is-2">
+            Poznań meetup sponsors
+        </h2>
+        <div class="partners has-text-centered">
+            <a target="_blank" href="https://sonalake.com/">
+                <img class="partner-logo" src="./assets/SONALAKE-grey.png" alt="SONALAKE logo">
+            </a>
+        </div>
+        <h2 class="title is-2">
+            Media patrons
+        </h2>
+        <div class="partners has-text-centered">
+            <a target="_blank" href="https://linuxiarze.pl">
+                <img alt="Linuxiarze.pl - Linux dla ludzi" title="Linuxiarze.pl - Linux dla ludzi" src="./assets/linuxiarze-logo.png">
+            </a>
+        </div>
+    </section>
+    <section class="section" id="agenda">
+        <div class="container">
+            <h2 class="title is-2">
+                Agenda
+            </h2>
+            <div class="content is-medium">
+                <p>
+                    The event consists of two main tracks. You are free to attend only one of them, or both - whichever
+                    you find more interesting!
+                </p>
+            </div>
+            <div class="section">
+                <h3 class="title is-3">Hackerspace</h3>
+                <div class="content is-medium">
+                    <p>
+                        A place to plop down with a laptop and write some code.
+                        Meet new people, ask for help, help others, talk about cool projects, share your knowledge,
+                        socialize!
+                        (Or don't. It's up to you - just have fun!)
+                    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="title is-3">Talks</h3>
+                <div class="content is-medium">
+                    <p>
+                        Talks about Free Software, Open Source, programming, and IT in general.
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="time">
+                                        11:00<br /><small>10 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/hackfest2018-logo-128px.png" class="circle" alt="Poznań Meetup Team">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Poznań Meetup Team</strong><br />
+                                        Opening talk
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        11:20<br /><small>30 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/aleksander-lorenc-2.png" class="circle" alt="Aleksander Lorenc">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Aleksander Lorenc</strong>
+                                        <small>
+                                            <a target="_blank" href="https://www.linkedin.com/in/aleksander-lorenc/"><i
+                                                    class="fa fa-linkedin"></i></a>
+                                            <a target="_blank" href="https://github.com/evilmint/"><i class="fa fa-github"></i></a>
+                                        </small>
+                                        <br />
+                                        Wstęp do Open Source - pierwszy projekt
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        12:00<br /><small>30 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/artur.iwicki.jpg" class="circle" alt="Artur Iwicki">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Artur Iwicki</strong>
+                                        <small>
+                                            <a target="_blank" href="https://twitter.com/suvepl/"><i class="fa fa-twitter"></i></a>
+                                            <a target="_blank" href="https://github.com/suve/"><i class="fa fa-github"></i></a>
+                                            <a target="_blank" href="https://blog.svgames.pl/"><i class="fa fa-globe"></i></a>
+                                        </small>
+                                        <br />
+                                        Nie tylko kod - jak jeszcze możesz wspierać Wolne Oprogramowanie
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        12:40<br /><small>15 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/damian-fajfer.jpeg" class="circle" alt="Damian Fajfer">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Damian Fajfer</strong>
+                                        <small>
+                                            <a target="_blank" href="https://www.linkedin.com/in/dfajfer/"><i class="fa fa-linkedin"></i></a>
+                                        </small>
+                                        <br />
+                                        Open Source w rolnictwie
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        13:05<br /><small>15 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/marcin-mielnicki.jpeg" class="circle" alt="Pizza!">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Marcin Mielnicki</strong>
+                                        <br />
+                                        Cool badges for your project
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        13:30<br /><small>20 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/kamil-pabin.jpeg" class="circle" alt="Kamil Pabin">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Kamil Pabin</strong>
+                                        <small>
+                                            <a target="_blank" href="https://www.linkedin.com/in/kamil-pabin-392777150/"><i
+                                                    class="fa fa-linkedin"></i></a>
+                                            <a target="_blank" href="https://github.com/KamilPabin"><i class="fa fa-github"></i></a>
+                                        </small>
+                                        <br />
+                                        Git tips &amp; tricks
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        14:00<br /><small>20 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/mateusz.pacek.jpg" class="circle" alt="Mateusz Pacek">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Mateusz Pacek</strong>
+                                        <small>
+                                            <a target="_blank" href="https://www.linkedin.com/in/mateusz-pacek-9a1a06128/"><i
+                                                    class="fa fa-linkedin"></i></a>
+                                            <a target="_blank" href="https://github.com/moarcode"><i class="fa fa-github"></i></a>
+                                        </small>
+                                        <br />
+                                        Steganografia przy kawie - czy warto ukrywać informację zamiast ją szyfrować?
+                                    </td>
+                                </tr>
+                                <tr class="dinner">
+                                    <td class="time">
+                                        14:20<br /><small>45 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/wikimedia-pizza.jpeg" class="circle" alt="Pizza!">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Dinner break</strong>
+                                        <br />
+                                        Free pizza for everyone!
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        15:05<br /><small>45 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/sylwia-blach.jpg" class="circle" alt="Sylwia Błach">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Sylwia Błach</strong>
+                                        <small>
+                                            <a target="_blank" href="http://facebook.com/blach.sylwia"><i class="fa fa-facebook"></i></a>
+                                            <a target="_blank" href="http://www.sylwiablach.pl/"><i class="fa fa-globe"></i></a>
+                                        </small>
+                                        <br />
+                                        Myśleć jak maszyna - o sztucznej inteligencji słów kilka
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        16:00<br /><small>30 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/oleksandr.tryschenko.jpg" class="circle" alt="Oleksandr Tryshchenko">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Oleksandr Tryshchenko</strong>
+                                        <small>
+                                            <a target="_blank" href="https://www.linkedin.com/in/oleksandr-tryshchenko/"><i
+                                                    class="fa fa-linkedin"></i></a>
+                                            <a target="_blank" href="https://github.com/tryshchenko"><i class="fa fa-github"></i></a>
+                                            <a target="_blank" href="https://tryshchenko.com"><i class="fa fa-globe"></i></a>
+                                        </small>
+                                        <br />
+                                        Developing software in a team without pain
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        16:40<br /><small>30 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/jedrzej-paulus.jpeg" class="circle" alt="Jędrzej Paulus">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Jędrzej Paulus</strong>
+                                        <small>
+                                            <a target="_blank" href="https://mobile.twitter.com/Codeboy_pl"><i class="fa fa-twitter"></i></a>
+                                            <a target="_blank" href="https://www.linkedin.com/in/jedrzejpaulus/"><i
+                                                    class="fa fa-linkedin"></i></a>
+                                            <a target="_blank" href="https://codeboy.pl"><i class="fa fa-globe"></i></a>
+                                        </small>
+                                        <br />
+                                        Początki w IT
+                                    </td>
+                                </tr>
+				<tr>
+                                    <td class="time">
+                                        17:20<br /><small>30 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/karol.sejka.jpg" class="circle" alt="Karol Sejka">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Karol Sejka</strong>
+                                        <small>
+                                            <a target="_blank" href="https://twitter.com/karolsejka/"><i class="fa fa-twitter"></i></a>
+                                            <a target="_blank" href="https://www.linkedin.com/in/karolsejka/"><i class="fa fa-linkedin"></i></a>
+                                            <a target="_blank" href="https://github.com/sejka"><i class="fa fa-github"></i></a>
+                                        </small>
+                                        <br />
+                                        Yet another serverless presentation - praktyczne zastosowania
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time">
+                                        18:50<br /><small>5 min.</small>
+                                    </td>
+                                    <td>
+                                        <span class="image is-64x64 centered">
+                                            <img src="./assets/hackfest2018-logo-128px.png" class="circle" alt="Poznań Meetup Team">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <strong>Poznań Meetup Team</strong><br />
+                                        Closing talk
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+                </div>
+            </div>
+            <div class="content is-medium">
+                <p>
+                    You only need to bring a laptop with you - drinks and food are on us!<br />
+                    If you are an open source project maintainer, you can prepare a lightning talk (~5min) to promote
+                    your project.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="section beautiful-header section-large">
+        <div class="container">
+            <p class="subtitle is-4 has-text-centered">
+                If you maintain any open source project feel free to join our event as a Maintainer.<br><br> Contact us
+                at:
+                <a href="mailto:team@hacktoberfest.pl">team@hacktoberfest.pl</a> or <a href="https://m.me/hacktoberfest">Facebook
+                    messenger</a>.
+            </p>
+        </div>
+    </div>
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="title is-2">FAQ</h2>
+            <div class="title is-4 is-spaced">What is Hacktoberfest?</div>
+            <div class="question is-spaced">
+                Hacktoberfest is an initiative by Github and DigitalOceans (<a href="https://hacktoberfest.digitalocean.com/">website</a>)
+                and it's all about contributing to open source projects. After submitting 5 contributions you'll get a
+                limited edtition Hacktoberfest 2018 T-Shirt. You can pick any project of your interest but all of the
+                contributions must be accepted within October.
+            </div>
+            <div class="question title is-4 is-spaced">Why are we doing this meetup?</div>
+            <div class="is-spaced">
+                Because we can! We all share a common passion for open source. We consider it to be a very important
+                idea. As such, it’s substantial to encourage new people to join the movement. And what better way could
+                there possibly be?
+            </div>
+            <div class="question title is-4 is-spaced">Who can join?</div>
+            <div class="is-spaced">
+                Anyone interested in Software Development. It doesn’t matter if these are your first steps towards Open
+                Source or if you are experienced Software Architect maintaining several projects. For beginners, we’re
+                going to show how to proceed with Git and GitHub. For experienced people, we can offer a comfortable
+                place with snacks to commit and contribute.
+            </div>
+            <div class="question title is-4 is-spaced">What's in it for me?</div>
+            <div class="is-spaced">
+                By contributing to Open Source, you’re helping everyone in the community. Additionally, as a person,
+                you become more valuable on the market. We have a chance to give what we took from Wikipedia!
+            </div>
+            <div class="question title is-4 is-spaced">Which languages will be spoken during the event?</div>
+            <div class="is-spaced">
+                All of the event staff speaks English and Polish. Talks will be given either in English or in Polish,
+                based on the speaker's preference (that said, we expect the majority to be in Polish).
+            </div>
+        </div>
+    </section>
+    <section class="section" id="tickets">
+        <div class="container">
+            <h2 class="title is-2">Tickets</h2>
+            <p class="subtitle is-4 has-text-centered">
+                <br>
+                <a class="button button is-secondary-button is-hero-button" href="https://www.eventbrite.com/e/hacktoberfest-poznan-tickets-49331461730"
+                    target="_blank">
+                    Get a free Ticket
+                </a>
+            </p>
+        </div>
+    </section>
+    <section class="section" id="location">
+        <div class="container">
+            <h2 class="title is-2">Where?</h2>
+            <p class="subtitle is-4 has-text-centered">
+                <a target="_blank" href="https://sonalake.com/">
+                    <img class="partner-logo" src="./assets/SONALAKE-grey.png" alt="SONALAKE logo">
+                </a>
+
+                <br><br><br>
+
+                <b>Sonalake Sp. z o.o.</b><br>
+                Plac Andersa 5<br>
+                61-894 Poznań<br>
+                <a href="https://goo.gl/maps/2xAAVh4xuzC2">Google Maps</a>
+            </p>
+        </div>
+    </section>
+    <div id="map"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <b>Hacktoberfest Poznań</b> - An initiative by open minds for open minds
+                </p>
+                <!--
+                        <p>Event powered by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i></a> and <a
+                    href="https://digitalocean.com" target="_blank">DigitalOcean</a></p>
+            -->
+                <p><a href="https://github.com/hacktoberfest-poznan/hacktoberfest-poznan.github.io">Source code</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/cash-dom@1.3.5/dist/cash.min.js"></script>
+    <script src="./js/bundle.min.js"></script>
+    <script>
+        var mymap = L.map('map').setView([52.400742, 16.9267539], 14);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1Ijoic2Vqa2EiLCJhIjoiY2psM3A5NmZnMHg1OTNwbjNjcDc3a2R5YSJ9.TiooejrrfaAB-ZiP380U7Q'
+        }).addTo(mymap);
+        var marker = L.marker([52.400742, 16.9267539]).addTo(mymap);
+        marker.bindPopup(
+            "<b>Sonalake</b><br>Plac Andersa 5<br><a href=https://goo.gl/maps/N8MFBGwDMLF2>Google maps</a>").openPopup();
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Event",
+            "name": "Hacktoberfest Poznań 2018",
+            "startDate": "2018-10-13T12:00+0200",
+            "endDate": "2018-10-13T19:00+0200",
+            "location": {
+                "@type": "Place",
+                "name": "Sonalake, Poznań, Poland",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Plac Andersa 5",
+                    "addressLocality": "Poznań",
+                    "postalCode": "61-894",
+                    "addressRegion": "Greater Poland",
+                    "addressCountry": "Poland"
+                }
+            },
+            "image": [
+                "https://hacktoberfest.pl/assets/cover.png"
+            ],
+            "description": "Hacktoberfest is an annual event across all of GitHub which is meant to encourage developers to contribute to open source projects. As a couple of guys amazed by open source projects, we decided to organise a meetup for this event in Poznań. Whether it's your first step in open source or you already maintain your major project for several years, join us and let's hack for Hacktoberfest together.",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://hacktoberfest.pl/",
+                "price": "0",
+                "priceCurrency": "PLN",
+                "availability": "http://schema.org/InStock",
+                "validFrom": "2018-10-01T00:00"
+            },
+            "performer": {
+                "@type": "PerformingGroup",
+                "name": "Hacktoberfest Poznań"
+            }
+        }
+    </script>
+</body>
+
+</html>
