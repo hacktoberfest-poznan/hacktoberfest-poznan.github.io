@@ -23,7 +23,7 @@ body, html {
   color: $color-white !important;
   border-width: 3px;
   &:hover {
-    border: 3px $color-orange solid;
+    border: 3px $color-highlight-bright solid;
   }
 }
 
@@ -164,8 +164,8 @@ section .subtitle {
 }
 
 .is-secondary-button {
-  background: $color-red;
-  border-color: $color-red;
+  background: $color-highlight;
+  border-color: $color-highligt;
   color: $color-white;
 }
 
@@ -270,7 +270,7 @@ section .subtitle {
 }
 
 .nav-item.nav-item-highlighted {
-  background-color: rgba(255, 100, 97, 0.85);
+  background-color: $color-highlight;
 }
 
 .table {
