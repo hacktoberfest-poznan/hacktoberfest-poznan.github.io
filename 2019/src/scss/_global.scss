@@ -70,6 +70,8 @@ section .subtitle {
   }
 }
 
+
+
 .speaker-footer {
   width: 100%;
   color: white;
@@ -262,11 +264,35 @@ section .subtitle {
   padding-bottom: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .hero-body {
+    .subtitle {
+      a {
+         display: block;
+         margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-body {
+    .subtitle {
+      a + a {
+         margin-left: 16px;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 768px) {
   .is-hero-button.is-secondary-button + .is-hero-button.is-secondary-button {
     margin-top: 20px;
   }
+}
+
+#map {
+  pointer-events: none;
 }
 
 .nav-item.nav-item-highlighted {
