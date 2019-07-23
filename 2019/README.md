@@ -15,6 +15,13 @@ Poznań, Poland
 ### Join as a Maintainer
 Of you maintain Open Source projects on GitHub, join us as a Maintainer and give a pitch or speech on our meetup. Just leave us a message or tell us on the beginning of the event.
 
+### Deployment
+
+Execute from root directory:
+
+```gulp deploy```
+
+
 ### Contact
 team@hacktoberfest.pl
 
