@@ -1,8 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Example user template template
 ### Example user template
-/node_modules
-/dist
+node_modules/
+dist/
 deploy_key.enc
 
 # IntelliJ project files
