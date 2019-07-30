@@ -258,13 +258,21 @@ section .subtitle {
 
 h2 + .partners {
   margin-top: -1rem;
+  margin-bottom: 1.5rem;
 }
 
 .partner-logo {
   max-width: 320px;
-  max-height: 80px;
   vertical-align: middle;
   margin: 0.5rem 2rem;
+
+  &.narrow {
+    max-height: 120px;
+  }
+
+  &.wide {
+    max-height: 80px;
+  }
 }
 
 .section.section-no-bottom-padding {
