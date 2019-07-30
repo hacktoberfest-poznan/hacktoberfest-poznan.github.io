@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     dest = "./dist",
 
     paths = {
-        html: "./src/index.html",
+        html: ["./src/index.html", "./src/polish.html"],
         scss: "./src/scss/**/*.scss",
         js: "./src/js/**/*",
         images: "./src/assets/**/*"
