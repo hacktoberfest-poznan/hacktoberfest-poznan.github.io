@@ -1,88 +1,97 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    postcss = require('gulp-postcss'),
-    concat = require('gulp-concat'),
-    htmlmin = require('gulp-htmlmin'),
-    watch = require('gulp-watch'),
-    tildeImporter = require('node-sass-tilde-importer'),
-    autoprefixer = require('autoprefixer'),
-    uglify = require('gulp-uglify'),
-    livereload = require('gulp-livereload'),
-    gutil = require('gulp-util'),
-    cssnano = require('cssnano'),
-    imagemin = require('gulp-imagemin'),
+const gulp = require('gulp');
+sass = require('gulp-sass'),
+postcss = require('gulp-postcss'),
+concat = require('gulp-concat'),
+htmlmin = require('gulp-htmlmin'),
+tildeImporter = require('node-sass-tilde-importer'),
+autoprefixer = require('autoprefixer'),
+terser = require('gulp-terser'),
+livereload = require('gulp-livereload'),
+log = require('fancy-log');
+chalk = require('chalk');
+cssnano = require('cssnano'),
+imagemin = require('gulp-imagemin'),
+ghPages = require('gulp-gh-pages'),
+del = require('del');
 
-    dest = "./dist",
+dest = './dist',
 
-    paths = {
-        html: ["./src/index.html", "./src/polish.html"],
-        scss: "./src/scss/**/*.scss",
-        js: "./src/js/**/*",
-        images: "./src/assets/**/*"
-    };
+paths = {
+	html: ['./src/index.html', './src/polish.html'],
+	scss: './src/scss/**/*.scss',
+	js: './src/js/**/*',
+	images: './src/assets/**/*'
+};
 
-gulp.task('styles', function () {
-    var processor = [
-        autoprefixer,
-        cssnano
-    ];
+function styles() {
+	const processor = [
+		autoprefixer,
+		cssnano
+	];
 
-    gulp.src(paths.scss)
-        .pipe(sass({
-            importer: tildeImporter
-        }).on('error', sass.logError))
-        .pipe(postcss(processor))
-        .pipe(gulp.dest(dest));
-});
+	return gulp.src(paths.scss)
+		.pipe(sass({
+			importer: tildeImporter
+		}).on('error', sass.logError))
+		.pipe(postcss(processor))
+		.pipe(gulp.dest(dest));
+}
 
-gulp.task('scripts', function () {
-    return gulp.src(
-            [
-                paths.js
-            ])
-        .pipe(concat('bundle.min.js'))
-        .pipe(uglify())
-        .on('error', function (err) {
-            gutil.log(gutil.colors.red('[Error]'), err.toString());
-        })
-        .pipe(gulp.dest(dest + '/js'));
-});
+function scripts() {
+	return gulp.src(
+		[
+			paths.js
+		])
+		.pipe(concat('bundle.min.js'))
+		.pipe(terser())
+		.on('error', err => {
+			log(chalk.ref('[ERROR]'), err.toString());
+		})
+		.pipe(gulp.dest(dest + '/js'));
+}
 
-gulp.task('imagemin', function () {
-    return gulp.src(paths.images)
-        .pipe(imagemin())
-        .pipe(gulp.dest(dest + '/assets'))
-});
+function images() {
+	return gulp.src(paths.images)
+		.pipe(imagemin())
+		.pipe(gulp.dest(dest + '/assets'));
+}
 
-gulp.task('minify', function () {
-    return gulp.src(paths.html)
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulp.dest(dest))
-        .pipe(livereload());
-});
+function html() {
+	return gulp.src(paths.html)
+		.pipe(htmlmin({
+			collapseWhitespace: true
+		}))
+		.pipe(gulp.dest(dest))
+		.pipe(livereload());
+}
 
-gulp.task('copy', function () {
-    return gulp.src([
-        './src/browserconfig.xml',
-        './src/CNAME',
-        './src/manifest.json'
-    ]).pipe(gulp.dest(dest));
-});
+function copy() {
+	return gulp.src([
+		'./src/browserconfig.xml',
+		'./src/CNAME',
+		'./src/manifest.json'
+	]).pipe(gulp.dest(dest));
+}
 
-var ghPages = require('gulp-gh-pages');
+function deploy() {
+	const options = {
+		branch: 'master'
+	};
 
-gulp.task('deploy', ['build'],  function () {
-    var options = {
-        branch: 'master'
-    };
-    return gulp.src('./dist/**/*')
-        .pipe(ghPages(options));
-});
+	return gulp.src('./dist/**/*')
+		.pipe(ghPages(options));
+}
 
-gulp.task('default', ['styles', 'minify', 'scripts', 'imagemin', 'copy'], function () {
-    gulp.watch([paths.scss, paths.html, paths.js], ['styles', 'minify', 'scripts']);
-});
+function watch() {
+	gulp.watch(paths.scss, styles);
+	gulp.watch(paths.html, html);
+	gulp.watch(paths.js, scripts);
+}
 
-gulp.task('build', ['styles', 'minify', 'scripts', 'imagemin', 'copy']);
+function clean() {
+	return del(['./dist']);
+}
+
+exports.default = gulp.series(clean, gulp.parallel(clean, styles, html, scripts, images, copy), watch);
+exports.build = gulp.series(clean, gulp.parallel(clean, styles, html, scripts, images, copy));
+exports.deploy = gulp.series(deploy);
